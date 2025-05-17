@@ -1,0 +1,647 @@
+/* ------------------------
+   GLOBAL
+------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.biru{
+  color:#1c1b82
+}
+
+.merah{
+  color:#e84848;
+}
+.back{
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+/* ------------------------
+   HEADER & NAVBAR
+------------------------ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* background-color: white; */
+
+  padding: 10px 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  padding-right: 30px;
+  background-color: #cccccc21;
+  backdrop-filter: blur(10px); /* efek blur */
+    -webkit-backdrop-filter: blur(10px); /* dukungan untuk Safari */
+    border-radius: 10px; /* opsional, agar sudut membulat */
+}
+
+.nav img {
+  width: 150px;
+  height: auto;
+}
+
+.navMenu {
+  display: flex;
+  gap: 40px;
+}
+
+.navMenu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navMenu a:hover {
+  background-color: #1c1b82;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* ------------------------
+   SECTION UMUM
+------------------------ */
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+#halaman1{
+   min-height: 100vh;
+    width: 100%;
+    background-image: 
+        linear-gradient(
+            to bottom, 
+            rgba(4, 9, 30, 0.6),  /* Terang di atas */
+            rgba(4, 9, 30, 1)   /* Gelap di bawah */
+        ), 
+        url(./assets/elektro.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#halaman2{
+    min-height: 100vh;
+    width: 100%;
+}
+
+#halaman4{
+    min-height: 100vh;
+    width: 100%;
+}
+#halaman3{
+  min-height: 100vh;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#halaman4{
+  min-height: 100vh;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundRistie{
+  background-image: 
+  linear-gradient(
+            to bottom, 
+            rgba(4, 9, 30, 0.6),  /* Terang di atas */
+            rgba(4, 9, 30, 1)   /* Gelap di bawah */
+        ), 
+  url('./assets/Ristie11.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.backgroundRnD {
+  background-image: 
+  linear-gradient(
+            to bottom, 
+            rgba(4, 9, 30, 0.6),  /* Terang di atas */
+            rgba(4, 9, 30, 1)   /* Gelap di bawah */
+        ), 
+  url('./assets/RnD.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  
+}
+
+#halaman5{
+  min-height: 100vh;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+#halaman6{
+  min-height: 100vh;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundEducation {
+  background-image: 
+  linear-gradient(
+            to bottom, 
+            rgba(4, 9, 30, 0.6),  /* Terang di atas */
+            rgba(4, 9, 30, 1)   /* Gelap di bawah */
+        ), 
+        url('./assets/Education15.jpg');
+  
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  
+} 
+
+.backgroundMedig{
+    background-image: 
+  linear-gradient(
+            to bottom, 
+            rgba(4, 9, 30, 0.6),  /* Terang di atas */
+            rgba(4, 9, 30, 1)   /* Gelap di bawah */
+        ), 
+        url('./assets/Digmed1jpg.jpg');
+  
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.backgroundJoin{
+    background-image: 
+  linear-gradient(
+            to bottom, 
+            rgba(4, 9, 30, 0.6),  /* Terang di atas */
+            rgba(4, 9, 30, 1)   /* Gelap di bawah */
+        ), 
+        url('./assets/Join.jpg');
+  
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+
+
+
+/* ------------------------
+   LANDING PAGE
+------------------------ */
+#halaman1 .container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.Welcome {
+  font-size: 4rem;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #e84848;
+  animation: typing 2s steps(20), blink 0.6s step-end infinite;
+}
+.Welcome{
+  color:rgb(219, 164, 11);
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.container1 a {
+  color: white;
+  background-color: #e84848;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.container1 a:hover {
+  background-color: #c73737;
+}
+
+/* ------------------------
+   HALAMAN 2: Tentang Ristie
+------------------------ */
+.container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.fotoRapat img {
+  border-radius: 8px;
+  border: 8px solid rgb(219, 164, 11);
+  width: 300px;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.holder1 {
+  max-width: 400px;
+}
+
+.Ristie {
+  color: rgb(219, 164, 11);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.deskripsiRistie {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: white;
+}
+
+/* ------------------------
+   NAVIGATION BUTTONS
+------------------------ */
+.nav-button {
+  position: absolute;
+  bottom: 40px;
+  padding: 10px 20px;
+  background-color: #1c1b82;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #14136b;
+}
+
+.previous {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+
+/* ------------------------
+   DIVISI SECTION
+------------------------ */
+.section-divisi .container-divisi {
+  text-align: center;
+}
+
+.judul-divisi {
+  font-size: 2.5rem;
+  color: rgb(219, 164, 11);
+  margin-bottom: 30px;
+}
+
+.daftar-divisi {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.daftar-divisi a{
+    text-decoration: none;
+}
+
+.item-divisi {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #e84848;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e84848;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.item-divisi:hover {
+  background-color: #e84848;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ------------------------
+   R&D SECTION
+------------------------ */
+.container-rnd {
+  text-align: center;
+  max-width: 800px;
+}
+
+.judul-rnd {
+  color: rgb(219, 164, 11);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: #000000e7;
+}
+
+.deskripsi-rnd {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  background-color: white;
+  backdrop-filter: blur(10px); /* efek blur */
+    -webkit-backdrop-filter: blur(10px); /* dukungan untuk Safari */
+    border-radius: 10px; /* opsional, agar sudut membulat */
+    padding: 10px;
+  
+}
+
+/* ------------------------
+   FOKUS R&D SECTION
+------------------------ */
+
+.judul-fokus{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 2.5rem;
+    color: rgb(219, 164, 11);
+}
+
+.grid-fokus {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.fokus-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.fokus-item:hover {
+  transform: scale(1.05);
+}
+
+.fokus-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(28, 27, 130, 0.8);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.corner-caption {
+  top: 10px;
+  right: 10px;
+  border-radius: 6px;
+  bottom: auto;
+  left: auto;
+  background-color: #c23f3f;
+  transform: rotate(-10deg);
+  font-weight: bold;
+  display: inline-block;
+  z-index: 1;
+  position: absolute;
+  color: white;
+  padding: 10px;
+}
+
+/* ------------------------
+   EDUCATION
+------------------------ */
+#halaman8 {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+
+/* Untuk semua gambar */
+.item {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Caption di dalam semua gambar */
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(28, 27, 130, 0.8);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Khusus baris bawah */
+.row.bottom .item {
+  height: 200px;
+}
+
+/* Badge NEW */
+.network-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: crimson;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+
+/* ------------------------
+   Medig
+------------------------ */
+
+/* SECTION STYLE */
+.section-medig {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+
+/* Container for image + caption */
+.lampiran-proyek {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Group of 2 images per section */
+.lampiranMedig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-group img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.image-group img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Caption style */
+.caption-medig {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #004aad;
+  background-color: rgba(240, 240, 240, 0.8);
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-group img {
+    width: 200px;
+    height: 300px;
+  }
+
+  .caption-medig {
+    font-size: 16px;
+  }
+}
+
+/* ------------------------
+   FOLLOW US
+------------------------ */
+.container-join {
+  text-align: center;
+}
+
+.judul-join {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #1c1b82;
+  color: white;
+  border-radius: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.sosmed-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sosmed-icons img {
+  width: 120px;
+  height: 120px;
+  transition: transform 0.3s ease;
+}
+
+.sosmed-icons img:hover {
+  transform: scale(1.1);
+}
